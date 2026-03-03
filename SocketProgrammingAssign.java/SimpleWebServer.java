@@ -6,7 +6,7 @@ import java.util.Scanner;
 class SimpleWebServer {
     public static void main(String[] args) throws Exception {
 
-        try (ServerSocket server = new ServerSocket(8080)) {   // changed to 8080 (port 80 needs admin)
+        try (ServerSocket server = new ServerSocket(8080)) {   
             System.out.println("Web server is running on port 8080...");
 
             while (true) {
@@ -32,7 +32,7 @@ class SimpleWebServer {
                     statusLine = "HTTP/1.0 200 OK\r\n";
 
                     if (method.equals("HEAD")) {
-                        body = "";  // HEAD does not return body
+                        body = "";  
                     }
 
                 } else {
